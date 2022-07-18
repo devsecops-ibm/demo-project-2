@@ -3,9 +3,6 @@ import boto3
 from botocore.exceptions import ClientError
 import os
 
-#   session = boto3.session.Session()
-#   s3 = session.resource('s3')
-
 s3_client = boto3.client('s3')
 def upload_file(file_name, bucket, object_name=None):
     if object_name is None:
